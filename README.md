@@ -11,7 +11,8 @@ $ make
 # gcc -g -Wall -std=gnu99 -c AhoCorasick.c
 # gcc -o a.out main.o Node.o NodeQueue.o NodeQueueOperation.o AhoCorasick.o RawOperation.o
 ```
-$ ./a.out pattern_filename payload_filename:
+The first argument is the pattern file,
+and the second argument is content to be checked.
 ```python
 $ ./a.out ./testcase/pattern1.txt ./testcase/content1.txt
 # print
