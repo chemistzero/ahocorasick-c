@@ -1,4 +1,6 @@
 # aho-corasick-string-matching
+- Aho-Corasick algorithm C implementation
+- only for 7-bits ASCII
 
 #### Usage
 execute make:
