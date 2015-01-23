@@ -43,9 +43,11 @@ int countLines(const char* filename) {
     }
   } while(byte != EOF);
 
+  #ifdef _WIN32
   // last line doesn't end with a new line!
   // but there has to be a line at least before the last line
-  //if(byte != '\n' && count != 0) count++;
+  if(byte != '\n' && count != 0) count++;
+  #endif
 
   fclose(file);
 
