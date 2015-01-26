@@ -9,6 +9,7 @@ typedef struct {
   void (*writeBytes)(const char*, Raw);
   int (*countLines)(const char*);
   char** (*readLines)(const char*, int);
+  void (*gc)(Raw);
 
 } RawOperationStruct, * RawOperation;
 
@@ -19,6 +20,8 @@ void writeBytes(const char*, Raw);
 int countLines(const char*);
 
 char** readLines(const char*, int);
+
+void gc(Raw);
 
 RawOperation RawOperationFactory();
 

@@ -58,8 +58,14 @@ int main(int argc, const char* argv[]) {
     }
   }
 
-  free(raw);
+  printf("\n - Done!\n");
+
   ahoCorasick->destroy(root);
+  rawOperation->gc(raw);
+  for(int i=0;i<numberOfPattern;i++) {
+    free(pattern[i]);
+  }
+  free(pattern);
 
   return 0;
 }

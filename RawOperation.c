@@ -43,11 +43,9 @@ int countLines(const char* filename) {
     }
   } while(byte != EOF);
 
-  #ifdef _WIN32
   // last line doesn't end with a new line!
   // but there has to be a line at least before the last line
   if(byte != '\n' && count != 0) count++;
-  #endif
 
   fclose(file);
 
@@ -90,8 +88,13 @@ char** readLines(const char* fileName, int numberOfLines) {
     fclose(file);
   }
 
-  //free(buffer);
+  free(buffer);
   return arr;
+}
+
+void gc(Raw raw) {
+  free(raw->data);
+  free(raw);
 }
 
 RawOperation RawOperationFactory() {
@@ -102,6 +105,7 @@ RawOperation RawOperationFactory() {
     rawOperation->writeBytes = writeBytes;
     rawOperation->countLines = countLines;
     rawOperation->readLines = readLines;
+    rawOperation->gc = gc;
   }
   return rawOperation;
 }
