@@ -39,6 +39,8 @@ $ ./a.out ./testcase/pattern1.txt ./testcase/content1.txt
 #  - find she at position 2 ~ 4
 #  - find he at position 3 ~ 4
 #  - find hers at position 3 ~ 6
+#
+#  - Done!
 ```
 more patterns, and longer content:
 ```python
@@ -98,4 +100,6 @@ $ ./a.out ./testcase/pattern3.txt ./testcase/content3.txt
 #  - find RNA at position 772 ~ 774
 #  - find inflorescence at position 803 ~ 815
 #  - find tissue at position 817 ~ 822
+#
+#  - Done!
 ```
