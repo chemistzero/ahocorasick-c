@@ -31,7 +31,7 @@ Node dequeue(NodeQueue queue) {
 }
 
 NodeQueueOperation NodeQueueOperationFactory()  {
-  NodeQueueOperation nodeQueueOperation = NULL;
+  static NodeQueueOperation nodeQueueOperation = NULL;
   if(!nodeQueueOperation) {
     nodeQueueOperation = malloc(sizeof(NodeQueueOperationStruct));
     nodeQueueOperation->enqueue = enqueue;

@@ -192,7 +192,7 @@ void destroy(Node root) {
 }
 
 AhoCorasick AhoCorasickFactory() {
-  AhoCorasick ahoCorasick = NULL;
+  static AhoCorasick ahoCorasick = NULL;
   if(!ahoCorasick) {
     ahoCorasick = malloc(sizeof(AhoCorasickStruct));
     ahoCorasick->buildTree = buildTree;
