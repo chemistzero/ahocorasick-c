@@ -1,4 +1,4 @@
-# aho-corasick-string-matching
+# Aho-Corasick String Matching Algorithm C implementation
 - Aho-Corasick algorithm C implementation
 - only for 7-bits ASCII
 
